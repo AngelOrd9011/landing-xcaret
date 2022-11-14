@@ -6,12 +6,13 @@ const Carousel = () => {
 	const [img, setImg] = useState(0);
 
 	const changeImage = (type: string) => {
+		const max = lang?.data?.carousel?.desktop.length - 1;
 		if (type === 'decrement') {
-			if (img === 0) setImg(5);
+			if (img === 0) setImg(max);
 			else setImg(img - 1);
 		}
 		if (type === 'increment') {
-			if (img === 5) setImg(0);
+			if (img === max) setImg(0);
 			else setImg(img + 1);
 		}
 	};

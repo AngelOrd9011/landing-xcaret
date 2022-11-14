@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { IconContext } from 'react-icons';
+import { FaFacebookF } from 'react-icons/fa';
+import { BsInstagram, BsTwitter } from 'react-icons/bs';
 
 const PageFooter = ({ lang }: any) => {
 	const [numbers, setNumbers] = useState([]);
@@ -23,6 +26,11 @@ const PageFooter = ({ lang }: any) => {
 
 	return (
 		<footer id={lang?.data?.navbar?.menu?.contact}>
+			<div className="grid legals">
+				<div className="col-12 md:col-6 md:col-offset-2 ">
+					<p>{lang?.data?.legals}</p>
+				</div>
+			</div>
 			<div className="grid pre-footer">
 				<div className="col-12 md:col-8 md:col-offset-2 ">
 					<div className="grid">
@@ -31,6 +39,19 @@ const PageFooter = ({ lang }: any) => {
 							<br />
 							<span>{lang?.data?.prefooter?.contactCenter?.email}</span>
 						</div>
+						<IconContext.Provider value={{ size: '1.3rem' }}>
+							<div className="col-12 md:col-6 social">
+								<a className="facebook" href={lang?.data?.prefooter?.social?.facebookUrl}>
+									<FaFacebookF />
+								</a>
+								<a className="instagram" href={lang?.data?.prefooter?.social?.instagramUrl}>
+									<BsInstagram />
+								</a>
+								<a className="twitter" href={lang?.data?.prefooter?.social?.twitterUrl}>
+									<BsTwitter />
+								</a>
+							</div>
+						</IconContext.Provider>
 					</div>
 					<div className="grid col-12 md:col-6 numbers-menu">
 						{mainNumbers?.map((item: any) => {

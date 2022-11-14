@@ -29,11 +29,6 @@ const Carousel = () => {
 			</div>
 
 			<img src={lang?.data?.carousel?.desktop[img]?.src} alt={lang?.data?.carousel?.desktop[img]?.alt} />
-			{/* <ul>
-				{lang?.data?.carousel?.desktop.map((img: any) => {
-					return <li key={img.alt}>{img.alt}</li>;
-				})}
-			</ul> */}
 		</div>
 	);
 };

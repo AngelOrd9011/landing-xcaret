@@ -61,6 +61,29 @@ footer {
 	background-color: #363636;
 	padding: 1rem 0;
 }
+.social {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+}
+.facebook {
+	position: absolute;
+	right: 26%;
+}
+.instagram {
+	position: absolute;
+	right: 18%;
+}
+.twitter {
+	position: absolute;
+	right: 10%;
+}
+.legals {
+	background-color: #ebebeb;
+	color: #000 !important;
+	font-size: 0.8rem !important;
+	padding: 2rem 0;
+}
 .numbers-menu {
 	margin-top: 2rem !important;
 	display: inline-flex;
@@ -94,11 +117,12 @@ footer {
 }
 .carousel {
 	width: 100%;
-	background-color: #dadada;
+	max-height: 570px;
+	background-color: #cccccc;
 	position: relative;
 }
 .carousel img {
-	margin: auto;
+	margin: 0 auto;
 }
 .carousel-buttons {
 	float: right;
